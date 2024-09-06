@@ -4,6 +4,11 @@
 			内部元素
 		</view>
 	</view>
+	<navigator url="/pages/demo1/demo1" open-type="navigate">跳转到demo1 open-type="navigate"</navigator>
+	<navigator url="/pages/demo1/demo1" open-type="reLaunch">跳转到demo1 open-type="reLaunch"</navigator>
+	<navigator url="/pages/demo2/demo2">
+		<image src="../../static/pic1.png" mode="aspectFill"></image>
+	</navigator>
 	<view class="">-----</view>
 	<text selectable space="emsp ">text    标签</text>
 	<scroll-view scroll-x class="scrollView">
