@@ -23,12 +23,20 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.layout {
-  border: 1px solid red;
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: #ccc;
 }
-.layout .box1 {
-  border: 1px solid yellow;
+.boxHover {
+  background-color: orange;
+  width: 300px;
 }
-.layout .box2 {
-  border: 1px solid blue;
+.inner {
+  width: 150px;
+  height: 150px;
+  background-color: green;
+}
+.innerHover {
+  background-color: greenyellow;
 }

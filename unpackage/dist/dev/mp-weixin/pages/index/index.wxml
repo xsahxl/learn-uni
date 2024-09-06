@@ -1,1 +1,1 @@
-<view class="layout"><view class="box1"> box1 </view><view class="box2"> box2 </view></view>
+<view class="box" hover-class="boxHover"><view class="inner" hover-class="innerHover" hover-stop-propagation> 内部元素 </view></view>

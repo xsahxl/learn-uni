@@ -1,12 +1,8 @@
 <template>
-	<view class="layout">
-		<view class="box1">
-			box1
+	<view class="box" hover-class="boxHover">
+		<view class="inner" hover-class="innerHover" hover-stop-propagation>
+			内部元素
 		</view>
-		<view class="box2">
-			box2
-		</view>
-		
 	</view>
 </template>
 
@@ -15,14 +11,21 @@
 </script>
 
 <style lang="scss">
-	.layout{
-		border: 1px solid red;
-		.box1{
-			border: 1px solid yellow;
-		}
-		.box2{
-			border: 1px solid blue;
-		}
+	.box{
+		width: 200px;
+		height: 200px;
+		background-color: #ccc;
 	}
-	
+	.boxHover{
+		background-color: orange;
+		width: 300px;
+	}
+	.inner{
+		width: 150px;
+		height: 150px;
+		background-color: green;
+	}
+	.innerHover{
+		background-color: greenyellow;
+	}
 </style>
