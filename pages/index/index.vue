@@ -4,6 +4,9 @@
 			内部元素
 		</view>
 	</view>
+	<view class="">-----</view>
+	<text selectable space="emsp">text    标签</text>
+
 </template>
 
 <script setup>
@@ -11,21 +14,5 @@
 </script>
 
 <style lang="scss">
-	.box{
-		width: 200px;
-		height: 200px;
-		background-color: #ccc;
-	}
-	.boxHover{
-		background-color: orange;
-		width: 300px;
-	}
-	.inner{
-		width: 150px;
-		height: 150px;
-		background-color: green;
-	}
-	.innerHover{
-		background-color: greenyellow;
-	}
+	
 </style>
