@@ -7,10 +7,14 @@
 </template>
 
 <script setup>
-	const emit = defineEmits(['add'])
-	function onAdd(){
-		emit('add', 123)
-	}
+import { onUnmounted } from 'vue';
+const emit = defineEmits(['add'])
+function onAdd(){
+	emit('add', 123)
+}
+onUnmounted(()=>{
+	console.log('组件被卸载了')
+})
 </script>
 
 <style>
