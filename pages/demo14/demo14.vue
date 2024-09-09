@@ -5,6 +5,7 @@
 		</scroll-view>
 		<awx-child v-if="show" @add="onAdd" ref="child"></awx-child>
 	</view>
+	<navigator url="/pages/demo15/demo15?name=xiaoming&age=20">跳转到demo15 </navigator>
 </template>
 
 <script setup>
