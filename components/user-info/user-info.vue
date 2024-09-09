@@ -13,7 +13,7 @@ defineProps({
 		type: String,
 		// default: '匿名' 
 		default(){
-			return '匿名';
+			return '匿名'; 
 		}
 	}
 });
