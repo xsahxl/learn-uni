@@ -7,13 +7,17 @@
 </template>
 
 <script setup>
-import { onUnmounted } from 'vue';
+import { onUnmounted, ref } from 'vue';
 const emit = defineEmits(['add'])
 function onAdd(){
 	emit('add', 123)
 }
 onUnmounted(()=>{
 	console.log('组件被卸载了')
+})
+const count = ref(100);
+defineExpose({
+	count
 })
 </script>
 

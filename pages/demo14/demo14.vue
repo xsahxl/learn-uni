@@ -3,22 +3,26 @@
 		<scroll-view scroll-y="true" ref='scroll' >
 			<view>xx</view>
 		</scroll-view>
-		<awx-child v-if="show" @add="onAdd"></awx-child>
+		<awx-child v-if="show" @add="onAdd" ref="child"></awx-child>
 	</view>
 </template>
 
 <script setup>
-import { onMounted, onUnmounted, ref } from 'vue';
+import { onMounted, ref } from 'vue';
 const scroll = ref(null);
-console.log(scroll.value);
 onMounted(()=>{
-	console.log(scroll.value);
+	console.log('scroll.value', scroll.value);
+
 });
 const show = ref(true);
 function onAdd(){
 	show.value = !show.value;
 }
-	
+
+const child = ref(null);
+onMounted(()=>{
+	console.log('child.value', child.value.count);
+})
 </script>
 
 <style lang="scss" scoped>
