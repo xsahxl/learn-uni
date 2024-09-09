@@ -10,12 +10,16 @@
 		<view class="">
 			{{count}}
 		</view>
+		<navigator url="/pages/demo13/demo13" open-type="reLaunch">reLaunch demo14</navigator>
+		<view v-for="(item,index) in 50" :key="index">
+			{{item}}
+		</view>
 	</view>
 </template>
 
 <script setup>
-import { onLoad, onReady, onShow, onHide } from '@dcloudio/uni-app';
-import { ref } from 'vue';
+import { onLoad, onReady, onShow, onHide, onUnload, onPageScroll } from '@dcloudio/uni-app';
+import { onBeforeMount, onMounted, ref } from 'vue';
 const person = ref(null);
 const scroll = ref(null)
 
@@ -40,13 +44,31 @@ onShow(()=>{
 })
 
 onHide(()=>{
-	console.log('onHide', count.value)
-	clearInterval(timer)
+	console.log('onHide', count.value);
+	clearInterval(timer);
+})
+
+onBeforeMount(()=>{
+	console.log('onBeforeMount');
 })
 
 onReady(()=>{
-	console.log('onReady', scroll.value)
+	console.log('onReady', scroll.value);
 })
+
+onMounted(()=>{
+	console.log('onMounted');
+})
+
+onUnload(()=>{
+	console.log('onUnload组件卸载了');
+})
+
+onPageScroll((e)=>{
+	console.log('onPageScroll', e)
+})
+
+
 	
 </script>
 
