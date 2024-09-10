@@ -6,6 +6,8 @@
 	<button @click="hideLoading" >hideLoading</button>
 	<button @click="showModal" >showModal</button>
 	<button @click="showActionSheet" >showActionSheet</button>
+	<button @click="setNavigationBarTitle" >setNavigationBarTitle</button>
+	
 </template>
 
 <script setup>
@@ -56,7 +58,14 @@ function showActionSheet(){
 	});
 
 }
-	
+
+function setNavigationBarTitle(){
+	uni.setNavigationBarTitle({
+		title: '动态标题'
+	});
+	// uni.showNavigationBarLoading();
+}
+
 </script>
 
 <style lang="scss" scoped>
