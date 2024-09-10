@@ -6,9 +6,12 @@
 	</view>
 	<navigator url="/pages/demo1/demo1" open-type="navigate">跳转到demo1 open-type="navigate"</navigator>
 	<navigator url="/pages/demo1/demo1" open-type="reLaunch">跳转到demo1 open-type="reLaunch"</navigator>
-	<navigator url="/pages/demo2/demo2">
+	<navigator open-type="reLaunch" url="/pages/demo2/demo2">
 		<image src="../../static/pic1.png" mode="aspectFill"></image>
 	</navigator>
+	<button @click="startPullDownRefresh">startPullDownRefresh</button>
+	<button @click="stopPullDownRefresh">stopPullDownRefresh</button>
+	
 	<view class="">-----</view>
 	<text selectable space="emsp ">text    标签</text>
 	<scroll-view scroll-x class="scrollView">
@@ -34,6 +37,19 @@
 </template>
 
 <script setup>
+uni.setTabBarItem({
+	index:1,
+	text:"custom"
+})
+
+function startPullDownRefresh(){
+	uni.startPullDownRefresh()
+}
+
+function stopPullDownRefresh(){
+	uni.stopPullDownRefresh()
+}
+
 	
 </script>
 

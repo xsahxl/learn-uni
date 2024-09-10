@@ -2,6 +2,10 @@
 	export default {
 		onLaunch: function() {
 			console.log('App Launch')
+			// uni.setTabBarBadge({
+			// 	index:1,
+			// 	text:'33'
+			// })
 		},
 		onShow: function() {
 			console.log('App Show')
