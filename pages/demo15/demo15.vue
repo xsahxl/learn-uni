@@ -18,8 +18,7 @@
 </template>
 
 <script setup>
-import { onLoad, onReady, onShow, onHide, onUnload, onPageScroll } from '@dcloudio/uni-app';
-import { onBeforeMount, onMounted, ref } from 'vue';
+
 const person = ref(null);
 const scroll = ref(null)
 
